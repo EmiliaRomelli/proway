@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<meta charset="UTF-8">
+
+<h3> Agência Divulga Tudo </h3>
+<h2> Gestão de Anúncio nas Redes Sociais </h2>
+
+<script>
+
+    // A cada 100 pessoas que visualizam o anúncio 12 clicam nele. Então precisamos de 8 visualizações para 1 clique
+    var vizualizacaoPor1Clique = 8;
+    // cada compartilhamento nas redes sociais gera 40 novas visualizações.
+    var VizualizacoesPorCompartilhamento = 40;
+    var valorInvestido = prompt ("Informe o valor que será investido:");
+    var totalGeral = 0;
+    var totalVisualizadoInicial 
+    var totalVisualizacoes = (valorInvestido*30);
+    totalGeral = totalGeral + totalVisualizacoes;
+    totalVisualizadoInicial = totalVisualizacoes
+    for (var i = 0; i < 4; i++) {
+    console.log(i);
+        // 30 pessoas visualizam o anúncio original (não compartilhado) a cada R$ 1,00 investido.
+        var totalCliques = (totalVisualizacoes/vizualizacaoPor1Clique);
+        // a cada 20 pessoas que clicam no anúncio 3 compartilham nas redes sociais. Então precisamos de 7 cliques para 1 compartilhamento
+        var totalCompartilhamento = (totalCliques/7);
+        // a cada 1 compartilhamento, geram 40 novas vizualizações
+        var totalNovasVisualizacoes = (totalCompartilhamento*VizualizacoesPorCompartilhamento);
+        console.log("totalNovasVisualizacoes: " + totalNovasVisualizacoes);
+        // substitui o valor total de visualizações para calcular os novos compartilhamentos
+        totalVisualizacoes = totalNovasVisualizacoes
+        //teste
+        totalGeral =  Math.round(totalGeral+totalNovasVisualizacoes);
+        //fim teste
+    }
+    document.write("Valor Investido R$ " + valorInvestido);
+    document.write("<br>");
+    document.write("Projeção de Vizualização do Anúncio: " + totalGeral);
+    document.write("<br>");
+
+    // Variaveis para controle
+    console.log("Total Vizualização " + totalVisualizacoes);
+    console.log("Total Clique " + totalCliques);
+    console.log("Total Compartilhamento " + totalCompartilhamento);
+    console.log("Total Novas Vizualizações " + totalNovasVisualizacoes);
+    console.log("Total Geral " + totalGeral);
+    // Variaveis para controle
+</script>
+</html>
