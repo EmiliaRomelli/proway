@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	
+	<head>
+		<meta charset-"UTF-8">
+		<title>GESTÃO DE ANÚNCIOS ONLINE</title>
+   	</head>
+
+	<body> 
+		<h1>Criar Anúncio</h1>
+			<form name="novo_anuncio" action="enviar.php" method="POST">
+	 		Nome da Campanha: <input type="text" name="nomeCampanha"><br><br>
+	 		Cliente: <input type="text" name="nomeCliente"><br><br>
+	 		Data de Início: <input type="date" name="dataInicio"><br><br>
+	 		Data de Término: <input type="date" name="dataTermino"><br><br>
+	 		Investimento por Dia R$: <input type="number" name="investimentoDia"><br><br>
+	 		<input type="action" name="Enviar">
+	 		<input type="submit" class="enviar" onclick="Avançar();" value="Avançar"/><br>
+	 		
+		</form><br><br>
+
+		<script>
+
+		var nomeCampanha = ""
+		var nomeCliente = ""
+		var dataInicio = ""
+		var dataTermino = ""
+		var investimentoDia = ""
+			
+	document.write ("<h3>RESULTADOS ESTIMADOS</h3>"+"<br>");
+	document.write ("Anúncio:" + nomeCampanha + "<br>");
+	document.write ("Cliente:" + nomeCliente + "<br>");
+	</script>
+</body>
+</html>
+    
+   
